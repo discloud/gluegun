@@ -1,8 +1,8 @@
 {
-  "name": "gluegun",
+  "name": "@discloudapp/gluegun",
   "version": "5.1.2",
   "description": "A delightful toolkit for building Node-powered CLIs.",
-  "repository": "infinitered/gluegun",
+  "repository": "discloud/gluegun",
   "bin": {
     "gluegun": "bin/gluegun"
   },
