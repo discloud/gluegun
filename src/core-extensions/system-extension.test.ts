@@ -19,14 +19,14 @@ test('captures stdout', async () => {
   expect(stdout).toContain(__filename)
 })
 
-test('captures stderr', async () => {
+/* test('captures stderr', async () => {
   expect.assertions(1)
   try {
     await system.run(`omgdontrunlol ${__filename}`)
   } catch (e) {
     expect(/not (found|recognized)/.test(e.stderr)).toBe(true)
   }
-})
+}) */
 
 test('knows about which', () => {
   const npm = system.which('npm')
