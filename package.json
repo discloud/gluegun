@@ -1,5 +1,5 @@
 {
-  "name": "gluegun",
+  "name": "@discloudapp/gluegun",
   "version": "5.1.6",
   "description": "A delightful toolkit for building Node-powered CLIs.",
   "repository": "infinitered/gluegun",
@@ -12,7 +12,7 @@
     "format": "prettier --write \"{**/*.ts,**/*.js,.circleci/**/*.js}\" --loglevel error && eslint . --fix",
     "clean-build": "rimraf ./build && node ./.circleci/removeDirect.js",
     "compile": "tsc -p .",
-    "copy-templates": "cp -a ./src/cli/templates ./build/cli/",
+    "copy-templates": "npx copyfiles -a -F -u=2 ./src/cli/templates/** ./build/cli/",
     "create-direct": "node ./.circleci/createDirect.js",
     "clean-types": "node .circleci/cleanDir.js ./build/types",
     "build": "yarn format && yarn clean-build && yarn compile && yarn copy-templates && yarn create-direct && yarn clean-types && echo 'Run yarn clean-build to remove build artifacts.'",
